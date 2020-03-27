@@ -1,0 +1,68 @@
+#include<process.h>
+  #include<iostream.h>
+  #include<conio.h>
+  #include<stdlib.h>
+  #include<string.h>
+  #include<stdio.h>
+  void main()
+  {
+    void time();
+    void entering(int n);
+    void check();
+    int n;
+    time();
+    cout<<"\ Do you have a sharp memory? Here I pose you a challenge!!";
+    cout<<"\n Can you remember,say 10 elements?N0?enter how many you can";
+    cin>>n;
+    cout<<"\n Hmmm.Lets see if you can keep up to your word!The rule of this game goies like this:";
+    cout<<endl<<"You and i enter words alternately and then you enter them together(mind the spellings :) )";
+    entering(n);
+    getch();
+  }
+
+  void time()
+  { int i;
+    system("COLOR F5");
+    cout<<"/n Welcome to my awesome game";
+for(i=0;i<1000;i++);
+ clrscr();
+    cout<<endl<<"There you go...."<<endl;
+  }
+
+  void entering(int n)
+{ randomize();
+    int i;
+    int randnos[20];
+for(i=1;i<20;i+=2)
+  { randnos[i]=random(20);}
+    char sname[20][20];
+    sname[1][20]={"sweet"};
+    sname[3][20]={"donkey"};
+    sname[5][20]={"africa"};
+    sname[7][20]={"samosa"};
+    sname[9][20]={"cheeze"};
+    sname[11][20]={"limo"};
+    sname[13][20]={"risk"};
+    sname[15][20]={"life"};
+    sname[17][20]={"average"};
+    sname[19][20]={"true"};
+
+  cout<<"\n enter elements";
+   for(i=0;i<20;i+=2)
+    {
+     cin>>sname[i][20];
+      cout<<"\n my element is"<<sname[randnos[1+i]][20];
+    }
+    char final[20][20];
+       for(i=1;i<20;i+=2)
+ { final[i][20]=sname[randnos[1+i]][20];
+ }
+       for(i=0;i<20;i+=2)
+ { final[i][20]=sname[i][20];
+ }
+   cout<<"new final array";
+      for(i=0;i<20;i++)
+       { cout<<final[i][20];
+cout<<endl;
+       }
+}
